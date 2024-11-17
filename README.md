@@ -2,8 +2,6 @@
 
 #### **1. Struktur Folder**
 
-Pastikan semua file terorganisir seperti ini:
-
 ```
 kitalulus/
 ├── data/
@@ -37,36 +35,6 @@ kitalulus/
 ---
 
 #### **2. Installasi Dependensi**
-
-Tambahkan dependensi berikut ke file `requirements.txt`:
-
-```plaintext
-numpy>=1.24.3
-pandas>=2.0.0
-scikit-learn>=1.2.2
-imbalanced-learn>=0.10.1
-joblib>=1.2.0
-nltk>=3.8.1
-spacy>=3.5.2
-
-
-tensorflow>=2.12.0
-transformers>=4.28.1
-fastapi>=0.95.1
-uvicorn>=0.21.1
-python-multipart>=0.0.6
-requests>=2.28.2
-pydantic>=1.10.7
-streamlit>=1.22.0
-plotly>=5.14.1
-streamlit-option-menu>=0.3.2
-streamlit-extras>=0.2.7
-matplotlib>=3.7.1
-seaborn>=0.12.2
-pyyaml>=6.0
-
--e .
-```
 
 Instal dependensi dengan menjalankan:
 
@@ -180,3 +148,108 @@ Pipeline akan memilih model terbaik berdasarkan:
 - **Akurasi** dan **RMSE** untuk analisis sentimen.
 
 ---
+
+
+<hr>
+
+# 📊 Customer Feedback Analysis
+
+
+![alt text](image.png)
+
+## 🎯 Key Findings
+
+### Attribute Mentions
+```markdown
+
+Faktor Size Dominan: 
+Ukuran merupakan atribut yang paling banyak disebutkan dalam review dengan sekitar 27,000 mentions 
+Ini menunjukkan bahwa konsumen sangat memperhatikan dan peduli tentang aspek ukuran produk 
+Mungkin banyak pembeli yang membahas masalah fitting atau kesesuaian ukuran 
+
+
+Comfort & Style Seimbang: 
+Comfort (kenyamanan) dan style (gaya) memiliki jumlah mentions yang hampir setara, masing-masing sekitar 15,000 mentions 
+Ini mengindikasikan bahwa konsumen mementingkan keseimbangan antara kenyamanan dan penampilan
+Kedua aspek ini menjadi pertimbangan penting setelah ukuran
+
+
+Quality Mendapat Perhatian Lebih Rendah: 
+Quality memiliki mentions terendah, sekitar 9,000
+
+Ini bisa mengindikasikan beberapa hal: 
+Konsumen mungkin lebih fokus pada aspek yang langsung terlihat/terasa
+Kualitas produk mungkin sudah cukup baik sehingga tidak terlalu dibahas 
+Atau sebaliknya, konsumen kurang memperhatikan aspek kualitas 
+
+
+Rekomendasi untuk Bisnis: 
+
+Fokus pada sizing yang tepat dan konsisten karena ini adalah concern utama konsumen 
+Mempertahankan keseimbangan antara aspek kenyamanan dan gaya 
+Meskipun kualitas kurang dibahas, tetap penting untuk dijaga 
+Mungkin perlu edukasi konsumen tentang aspek kualitas produk 
+
+
+Prioritas Konsumen: 
+Urutan prioritas konsumen berdasarkan mentions: 
+
+Faktor Ukuran (Size) Dominan:
+- Ukuran merupakan atribut yang paling banyak disebutkan dalam review dengan sekitar 27,000 mentions
+- Ini menunjukkan bahwa konsumen sangat memperhatikan dan peduli tentang aspek ukuran produk
+- Mungkin banyak pembeli yang membahas masalah fitting atau kesesuaian ukuran
+
+comfort & style Seimbang:
+- Comfort (kenyamanan) dan style (gaya) memiliki jumlah mentions yang hampir setara, masing-masing sekitar 15,000 mentions
+- Ini mengindikasikan bahwa konsumen mementingkan keseimbangan antara kenyamanan dan penampilan
+- Kedua aspek ini menjadi pertimbangan penting setelah ukuran
+
+Quality Mendapat Perhatian Lebih Rendah:
+- Quality (kualitas) memiliki mentions terendah, sekitar 9,000
+- Ini bisa mengindikasikan beberapa hal:
+  * Konsumen mungkin lebih fokus pada aspek yang langsung terlihat/terasa
+  * Kualitas produk mungkin sudah cukup baik sehingga tidak terlalu dibahas
+  * Atau sebaliknya, konsumen kurang memperhatikan aspek kualitas
+
+Rekomendasi untuk Bisnis:
+- Fokus pada sizing yang tepat dan konsisten karena ini adalah concern utama konsumen
+- Mempertahankan keseimbangan antara aspek kenyamanan dan gaya
+- Meskipun kualitas kurang dibahas, tetap penting untuk dijaga
+- Mungkin perlu edukasi konsumen tentang aspek kualitas produk
+
+Prioritas Konsumen:
+- Urutan prioritas konsumen berdasarkan mentions:
+  1. Size
+  2. Comfort
+  3. Style
+  4. Quality
+```
+
+### Topics
+
+![alt text](image-1.png)
+
+```
+Ukuran sangat penting bagi pembeli. Trigram terkait ukuran seperti "fit true size", "run true size", "size fit perfectly", dan "small fit perfectly" sering muncul, menunjukkan pentingnya kecocokan ukuran produk. <br>
+
+Pembeli sangat memperhatikan komplimen yang mereka terima. "received many compliment" berada di urutan kedua, mengindikasikan konsumen senang saat orang lain memuji produk yang mereka beli. <br>
+
+Kualitas adalah faktor kunci. Trigram seperti "love love love" dan "usually wear size" menandakan kepuasan konsumen dengan kualitas dan kesesuaian produk. <br>
+
+Kenyamanan juga menjadi perhatian. "fit like glove" dan "look great jean" menunjukkan konsumen menghargai produk yang pas, nyaman dipakai dan tampak bagus. <br>
+
+Konsumen memiliki preferensi ukuran tertentuBerdasarkan grafik di atas yang menunjukkan 20 trigram paling sering muncul dalam ulasan, beberapa insight yang dapat diperoleh dalam Bahasa Indonesia adalah: <br>
+
+1. Ukuran sangat penting bagi pembeli. Trigram terkait ukuran seperti "fit true size", "run true size", "size fit perfectly", dan "small fit perfectly" sering muncul, menunjukkan pentingnya kecocokan ukuran produk.
+
+2. Pembeli sangat memperhatikan komplimen yang mereka terima. "received many compliment" berada di urutan kedua, mengindikasikan konsumen senang saat orang lain memuji produk yang mereka beli.
+
+3. Kualitas adalah faktor kunci. Trigram seperti "love love love" dan "usually wear size" menandakan kepuasan konsumen dengan kualitas dan kesesuaian produk.
+
+4. Kenyamanan juga menjadi perhatian. "fit like glove" dan "look great jean" menunjukkan konsumen menghargai produk yang pas, nyaman dipakai dan tampak bagus.
+
+5. Konsumen memiliki preferensi ukuran tertentu. "usually wear small" dan "every time wear" mengindikasikan pembeli cenderung setia pada ukuran yang biasa mereka kenakan.
+
+Secara keseluruhan, ulasan menunjukkan pentingnya keakuratan ukuran, kualitas produk, kenyamanan pemakaian, dan pujian dari orang lain dalam menentukan kepuasan konsumen pada produk fashion yang mereka beli.. "usually wear small" dan "every time wear" mengindikasikan pembeli cenderung setia pada ukuran yang biasa mereka kenakan.
+
+```
