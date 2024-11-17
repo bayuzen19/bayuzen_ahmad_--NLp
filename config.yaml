@@ -1,0 +1,25 @@
+data:
+  path: "./data/Womens Clothing E-Commerce Reviews.csv"
+  test_size: 0.2
+  random_state: 42
+
+model:
+  tfidf:
+    max_features: 5000
+  random_forest:
+    base:
+      random_state: 42
+    tuned:
+      n_estimators: 200
+      max_depth: 20
+      min_samples_split: 10
+      random_state: 42
+
+sampling:
+  smote:
+    strategy: 0.5
+  undersample:
+    strategy: 0.7
+  combined:
+    smote_strategy: 0.6
+    undersample_strategy: 0.7
