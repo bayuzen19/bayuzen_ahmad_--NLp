@@ -133,7 +133,7 @@ Pada halaman evaluasi, Anda dapat melihat:
 - **False Positive**: Review yang salah diprediksi sebagai "Recommended".
 - **False Negative**: Review yang salah diprediksi sebagai "Not Recommended".
 
-##### **Pentingnya Fitur**
+##### **Feature Importances**
 
 Anda dapat melihat fitur (kata) mana yang paling berpengaruh pada keputusan model:
 
